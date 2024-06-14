@@ -30,7 +30,7 @@ const SignupPage = () => {
 
   const handleSignup = async (values, { setSubmitting, setFieldError, resetForm }) => {
     try {
-      const response = await axios.post('http://192.168.1.7:3000/api/register', 
+      const response = await axios.post('http://192.168.1.5:3000/api/register', 
       // 'http://10.0.0.53:3000/api/register',
       {
         name: values.name,
@@ -67,10 +67,10 @@ const SignupPage = () => {
   };
 
   // handling the terms and condition
-  const [isChecked, setChecked] = useState(false);
-  const handleCheck = () => {
-    setChecked(!isChecked);
-  };
+    const [isChecked, setChecked] = useState(false);
+    const handleCheck = () => {
+      setChecked(!isChecked);
+    };
 
   const handleTermsAndCondition = () =>{
     navigation.navigate('SignUpTermsAndCondtion');
@@ -104,13 +104,10 @@ const SignupPage = () => {
         <View style={{
           width: '10%',
         }}>
-
         </View>
       </View>
       <View style={styles.Body}>
-        <Formik
-          style={styles.Container}
-          initialValues={
+        <Formik style={styles.Container} initialValues={
             {
               name: '',
               role: '',
@@ -258,9 +255,6 @@ const styles = StyleSheet.create({
   },
   Header: {
     flexDirection: 'row',
-    // height: '5%',
-    // justifyContent:'center',
-    // alignItems:'center',
   },
   createAccountText: {
     fontSize: 30,
@@ -270,8 +264,6 @@ const styles = StyleSheet.create({
   Body: {
     alignItems: 'center',
     justifyContent: 'center',
-    // width: '100%',
-    // height: '100%',
   },
   signupTextInput: {
     fontSize: 20,
@@ -283,9 +275,6 @@ const styles = StyleSheet.create({
   },
   signupButtonWrapper:{
     alignItems: 'center',
-    // width: width * 0.5,
-    // height: '3%',
-    // backgroundColor: 'blue',
     justifyContent: 'center',
   },
   signupText: {
@@ -308,11 +297,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   checkboxContainer: {
-    // width: 340,
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center',
-    // backgroundColor: "blue",
+    alignItems: 'center',  
   },
   checkboxLabelWrapper:{
     flexDirection: 'row',
@@ -320,8 +307,6 @@ const styles = StyleSheet.create({
   },
 
   checkboxLabel: {
-    // color: "blue",
-    // marginLeft: ,
     fontSize: 16,
   },
   checkboxLabelBlue:{

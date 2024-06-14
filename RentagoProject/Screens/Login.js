@@ -10,7 +10,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email or password').required('Email is required'),
-  password: Yup.string().required('Password is required'),
+  password: Yup.string().required('Password is required')
 });
 
 const Login = () => {
@@ -35,7 +35,7 @@ const Login = () => {
             setLoading(true);
 
             await LoginSchema.validate(values, { abortEarly: false });
-            const response = await axios.post('http://192.168.1.7:3000/api/login', {
+            const response = await axios.post('http://192.168.1.5:3000/api/login', {
               email: values.email,
               password: values.password,
             });
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
         marginVertical: 25,
         backgroundColor: '#ffffff',
         fontSize: 25,
-    },
+        },
     forgotpassWrapper:{
         width: '80%',
         alignItems: 'flex-end',
@@ -235,6 +235,10 @@ const styles = StyleSheet.create({
         color: '#55bCF6',
         fontWeight: 'bold'
     },
+
+    test:{
+      
+    }
 });
 
 export default Login;

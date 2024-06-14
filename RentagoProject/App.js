@@ -16,7 +16,7 @@ import GoogleMapSearch from './Screens/GoogleMapSearch';
 import GoogleMapRegisterImageConfirmation from './Screens/GoogleMapRegisterImageConfirmation'
 import GoogleMapSearchProfile from './Screens/GoogleMapSearchProfile'
 import AboutUs from './Screens/AboutUsPage';
-import Test from './Screens/Test'
+// import Test from './Screens/Test'
 
 const Stack = createNativeStackNavigator();
 
@@ -24,13 +24,13 @@ export default function App() {
 return (
     <NavigationContainer>
         <Stack.Navigator
-            initialRouteName="GoogleMapSearch"
+            initialRouteName="Login"
             screenOptions={{
                 headerShown: false,
                 animation: 'slide_from_right', // Set the animation option
             }}
         >
-            <Stack.Screen name="Test" component={Test} />
+            {/* <Stack.Screen name="Test" component={Test} /> */}
             <Stack.Screen name="Login" component={LoginPage} />
             <Stack.Screen name="Home" component={HomePage} />
             <Stack.Screen name="GoogleMapRegister" component={GoogleMapRegisterSelectPlace} />

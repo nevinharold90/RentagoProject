@@ -11,8 +11,7 @@ class MultiImage extends Model
     protected $table = 'multi_images';
     protected $fillable = ['location_id', 'url'];
 
-    public function location(): BelongsTo
-    {
+    public function location(): BelongsTo{
         return $this->belongsTo(Location::class);
     }
 }

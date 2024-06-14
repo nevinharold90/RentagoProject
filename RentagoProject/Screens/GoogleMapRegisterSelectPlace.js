@@ -131,7 +131,7 @@ export default function App() {
                     coordinate: coordinate,
                     userInfo: userInfoFromLogin,
                     userCity: city,
-                    userRegion: region,
+                    userRegion: region
                   });
                 },
               },
