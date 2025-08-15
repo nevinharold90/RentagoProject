@@ -22,3 +22,5 @@ Route::post('register', [RegisterController::class, 'register']);
 Route::post('login', [RegisterController::class, 'login']);
 Route::post('/logout', [RegisterController::class,'logout'])->middleware('auth:api');;
 Route::post('store-location', [LocationController::class, 'storeLocation']);
+Route::get('locations', [LocationController::class, 'getLocations']);
+Route::get('locations', [LocationController::class, 'getLocations']);
